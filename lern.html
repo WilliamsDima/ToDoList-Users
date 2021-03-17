@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ToDoList - createUsers</title>
+</head>
+<body>
+	<style>
+		body {
+			margin: 0;
+			height: 100%;
+			background: #000000;
+			background: -webkit-linear-gradient(top, #000000, #323232);
+			background: -moz-linear-gradient(top, #000000, #323232);
+			background: linear-gradient(to bottom, #000000, #323232);
+			background-repeat: no-repeat;
+		}
+
+		#todo-user {
+			max-width: 500px;
+			background-color: #000;
+			color: #fff;
+			margin: 0 auto;
+			margin-top: 10%;
+			text-align: center;
+			border: 2px solid #08FDD8;
+			border-radius: 5px;
+			padding: 2rem;
+			margin-bottom: 10rem;
+
+			-webkit-box-shadow: 0px 6px 22px 0px rgba(50, 50, 50, 0.75);
+			-moz-box-shadow:    0px 6px 22px 0px rgba(50, 50, 50, 0.75);
+			box-shadow:         0px 6px 22px 0px rgba(50, 50, 50, 0.75);
+		}
+
+		input {
+			display: block;
+			width: 100%;
+			height: 2rem;
+			margin-bottom: 2rem;
+			background-color: gray;
+			color: #08FDD8;
+			font-size: 1.5rem;
+			border: none;
+			border-radius: 3px;
+		}
+		input::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease; color: #fff;}
+		input:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
+
+		#createUser {
+			color: #fff;
+			cursor: pointer;
+			padding: 1rem;
+			font-size: 1.4rem;
+			background: transparent;
+			border-radius: 3px;
+			border: 2px solid  #08FDD8;
+
+			transition: all .2s linear;
+		}
+
+		#createUser:hover {
+			border-color: rgb(1, 75, 67);
+		}
+
+		#todo {
+			margin-top: 2rem;
+			list-style: none;
+			text-align: left;
+			font-size: 1rem;
+			margin-bottom: 4rem;
+			padding: 0;
+		}
+
+		li {
+			margin-bottom: 2rem;
+			display: flex;
+			border-bottom: 1px solid #fff;
+			padding-bottom: 1rem;
+		}
+
+		label {
+			cursor: pointer;
+		}
+
+		.important {
+			color: #08FDD8;
+		}
+
+		p {
+			text-align: left;
+			margin-top: 0;
+			margin-bottom: 0;
+			font-size: 1.2rem;
+		}
+
+		label p {
+			margin-bottom: 1rem;
+		}
+
+		#form {
+			margin-top: 2rem;
+		}
+
+		.btn-del {
+			width: 30px;
+			height: 30px;
+			margin: auto 0;
+			margin-right: 1rem;
+			cursor: pointer;
+			font-weight: 700;
+			color: red;
+		}
+
+		.info {
+			font-size: 1rem;
+			color: gray;
+			margin-left: 2rem;
+		}
+
+		.statistik {
+			position: fixed;
+			top: 50%;
+			right: 16%;
+			width: 300px;
+			height: 100px;
+			border: 2px solid #08FDD8;
+			background-color: #000;
+			color: #fff;
+			padding: 1rem;
+			border-radius: 3px;
+		}
+
+
+	</style>
+
+<div id="todo-user">
+	<h2>ToDoList - createUsers</h2>
+
+	<p>Инструкция:</p>
+	<p>1: Выделить текст цветом, ПКМ по текущему email</p>
+	<p>2: Чтобы удалить объект, зажать ctrl или comand(mac) + ПКМ на текущем email</p>
+
+	<form id="form">
+
+		<input id="email" type="email" name="email" placeholder="ваш email">
+		<input id="supername" type="text" name="supername" placeholder="фамилия">
+		<input id="nameUser" type="text" name="name" placeholder="имя">
+		<input id="age" type="number" name="age" placeholder="лет">
+		<input id="phone" type="number" placeholder="ваш номер телефона">
+
+		<button id="createUser" type="button">создать пользователя</button>
+
+	</form>
+
+	<ul id="todo">
+
+	</ul>
+</div>
+
+<div class="statistik">
+<p>Статистика:</p>
+<span>Количество пользователей: </span><span id="users-length">0</span>
+</div>
+
+<script type="text/javascript" src="lern.js"></script>
+</body>
+</html>
